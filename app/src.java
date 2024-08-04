@@ -6,7 +6,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
+import org.sympy.core.Expr;
+import org.sympy.core.Symbols;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.text.DecimalFormat;
@@ -106,6 +107,20 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+
+public class SymbolicManipulation {
+    public static Expr solve(Expr equation) {
+        return equation.solve();
+    }
+
+    public static Expr differentiate(Expr expression) {
+        return expression.diff();
+    }
+
+    public static Expr integrate(Expr expression) {
+        return expression.integrate();
+    }
+}
     private void performCalculation(char operator) {
         String num1Str = num1EditText.getText().toString();
         String num2Str = num2EditText.getText().toString();
