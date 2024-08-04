@@ -8,6 +8,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 import org.sympy.core.Expr;
 import org.sympy.core.Symbols;
+import android.graphics.Canvas;
+import android.graphics.Paint;
+import android.view.View;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.text.DecimalFormat;
@@ -118,7 +122,34 @@ public class SymbolicManipulation {
     }
 
     public static Expr integrate(Expr expression) {
-        return expression.integrate();
+        return expression.integrate(); }}
+    
+public class GraphView extends View {
+    private Paint paint;
+    private double[] xValues;
+    private double[] yValues;
+
+    public GraphView(Context context) {
+        super(context);
+        paint = new Paint();
+        paint.setColor(Color.BLACK);
+        paint.setStrokeWidth(2);
+    }
+
+    public void setXValues(double[] xValues) {
+        this.xValues = xValues;
+    }
+
+    public void setYValues(double[] yValues) {
+        this.yValues = yValues;
+    }
+
+    @Override
+    protected void onDraw(Canvas canvas) {
+        super.onDraw(canvas);
+        for (int i = 0; i < xValues.length; i++) {
+            canvas.drawPoint((float) xValues[i], (float) yValues[i], paint);
+        }
     }
 }
     private void performCalculation(char operator) {
