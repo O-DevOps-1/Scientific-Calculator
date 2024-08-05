@@ -10,6 +10,7 @@ import org.sympy.core.Expr;
 import org.sympy.core.Symbols;
 import android.graphics.Canvas;
 import android.graphics.Paint;
+
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
