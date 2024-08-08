@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <style name="AppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
+    <item name="colorPrimary">@color/colorPrimary</item>
+    <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    <item name="colorAccent">@color/colorAccent</item>
+  </style>
+
+  <style name="CalculatorTheme" parent="AppTheme">
+    <item name="android:windowBackground">@color/background</item>
+    <item name="android:textColor">@color/textPrimary</item>
+    <item name="android:elevation">4dp</item>
+    <item name="android:cornerRadius">8dp</item>
+  </style>
+
+  <style name="CalculatorButton" parent="Widget.MaterialComponents.Button.OutlinedButton">
+    <item name="android:textColor">@color/onPrimary</item>
+    <item name="android:backgroundTint">@color/surface</item>
+    <item name="android:strokeColor">@color/outline</item>
+    <item name="android:strokeWidth">1dp</item>
+  </style>
+
+  <style name="CalculatorOperatorButton" parent="CalculatorButton">
+    <item name="android:textColor">@color/colorPrimary</item> </style>
+</resources>
